@@ -2,7 +2,8 @@ import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ocdear/screen/home_screen/games_home.dart';
+import 'package:ocdear/screen/home_screen/games_tab.dart';
+import 'package:ocdear/screen/home_screen/learning_tab.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/screen/home_screen/widgets/details_home.dart';
 
@@ -26,10 +27,8 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _screens = [
     const DetailsHome(),
-    Container(
-      color: Colors.blue,
-    ),
-    const Games_Home(),
+    const LearningTab(),
+    const GamesTab(),
     Container(
       color: Colors.pinkAccent,
     ),
@@ -55,11 +54,11 @@ class _HomePageState extends State<HomePage> {
         items: [
           CurvedNavigationBarItem(
               child: SvgPicture.asset("assets/icons/home/home.svg"),
-              label: 'الرئيسيه',
+              label: 'الرئيسية',
               labelStyle: const TextStyle(color: AppColors.dark)),
           CurvedNavigationBarItem(
               child: SvgPicture.asset("assets/icons/home/learn.svg"),
-              label: 'التلعم',
+              label: 'التعلم',
               labelStyle: const TextStyle(color: AppColors.dark)),
           CurvedNavigationBarItem(
               child: SvgPicture.asset("assets/icons/home/games.svg"),
