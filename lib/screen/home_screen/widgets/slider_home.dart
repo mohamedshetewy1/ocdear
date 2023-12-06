@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+
 import 'package:ocdear/utils/colors.dart';
+import 'package:ocdear/utils/text_style.dart';
 
 class SliderHomePage extends StatefulWidget {
   const SliderHomePage({super.key});
@@ -10,11 +12,13 @@ class SliderHomePage extends StatefulWidget {
 }
 
 class _SliderHomePageState extends State<SliderHomePage> {
-  List imageList = [
-    {"id": 1, "image_path": 'assets/images/home/slider1.png'},
-    {"id": 2, "image_path": 'assets/images/home/Rectangle 16.png'},
-    {"id": 3, "image_path": 'assets/images/home/Rectangle 16.png'},
-    {"id": 3, "image_path": 'assets/images/home/Rectangle 16.png'},
+  List<SliderModel> imageList = [
+    SliderModel("1", "assets/images/home/slider/S_1.png",
+        "اضطراب الوسواس القهري لدى الأطفال هو حالة قد يواجهون فيها أفكارًا أو مخاوف غير مرغوب فيها ويشعرون بأنهم مجبرون على أداء سلوكيات أو طقوس متكررة للتخفيف من قلقهم."),
+    SliderModel("2", "assets/images/home/slider/S_2.png",
+        "مجموعة الفيديوهات تسلط الضوء على الوسواس القهري وتقدم معلومات قيمة واستراتيجيات فعالة لمساعدة الأشخاص على فهم ومواجهة هذا الاضطراب النفسي."),
+    SliderModel("3", "assets/images/home/slider/S_3.png",
+        "الألعاب المصممة خصيصًا للأطفال المصابين بالوسواس القهري توفر تجربة تفاعلية ممتعة ومساعدة للأطفال في فهم الوسواس القهري وتعلم استراتيجيات للتعامل معه بطرق إيجابية ومرحة."),
   ];
   final CarouselController carouselController = CarouselController();
   int currentIndex = 0;
@@ -26,28 +30,49 @@ class _SliderHomePageState extends State<SliderHomePage> {
           // print(currentIndex);
         },
         child: Padding(
-          padding: const EdgeInsets.all(0),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+          ),
           child: Container(
-            height: 170,
+            height: 150,
+            width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-            ),
+                borderRadius: BorderRadius.circular(15),
+                color: AppColors.lightHover),
             child: CarouselSlider(
               items: imageList
-                  .map(
-                    (item) => Image.asset(
-                      item['image_path'],
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                    ),
-                  )
+                  .map((item) => Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Directionality(
+                            textDirection: TextDirection.rtl,
+                            child: SizedBox(
+                              width: 205,
+                              height: 110,
+                              child: Center(
+                                child: Text(
+                                  item.text,
+                                  style: AppTextStyle.textStyle14,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: 140,
+                            height: 170,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(item.image)),
+                            ),
+                          ),
+                        ],
+                      ))
                   .toList(),
               carouselController: carouselController,
               options: CarouselOptions(
                 autoPlay: true,
                 autoPlayAnimationDuration: const Duration(seconds: 5),
                 scrollPhysics: const BouncingScrollPhysics(),
-                // autoPlay: true,
                 aspectRatio: 2,
                 viewportFraction: 1,
                 onPageChanged: (index, reason) {
@@ -87,4 +112,11 @@ class _SliderHomePageState extends State<SliderHomePage> {
       )
     ]);
   }
+}
+
+class SliderModel {
+  final String text;
+  final String image;
+  final String id;
+  SliderModel(this.id, this.image, this.text);
 }

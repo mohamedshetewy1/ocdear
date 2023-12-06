@@ -3,6 +3,7 @@ import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ocdear/screen/home_screen/games_home.dart';
+import 'package:ocdear/screen/home_screen/learning_tap.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/screen/home_screen/widgets/details_home.dart';
 
@@ -26,10 +27,8 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _screens = [
     const DetailsHome(),
-    Container(
-      color: Colors.blue,
-    ),
-    const Games_Home(),
+    const LearningTab(),
+    const GamesHome(),
     Container(
       color: Colors.pinkAccent,
     ),

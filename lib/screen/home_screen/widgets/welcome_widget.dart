@@ -8,44 +8,47 @@ class WelcomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Stack(
-          children: [
-            Container(
-              decoration: const BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.all(Radius.circular(60))),
-              height: 60,
-              width: 60,
-            ),
-            const Positioned.fill(
-              right: 0,
-              top: 5,
-              child: CircleAvatar(
-                radius: 30,
-                backgroundImage:
-                    AssetImage('assets/images/home/Ellipse 69.png'),
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Stack(
+            children: [
+              Container(
+                decoration: const BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.all(Radius.circular(60))),
+                height: 60,
+                width: 60,
               ),
-            )
-          ],
-        ),
-        const Directionality(
-          textDirection: TextDirection.rtl,
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(
-              "اهلا مستخدم",
-              style: AppTextStyle.textStyle25,
-            ),
-            Text(
-              "اهلا بك في تطبيقك المفضل",
-              style: AppTextStyle.textStyle16,
-            )
-          ]),
-        ),
-      ],
+              const Positioned.fill(
+                right: 0,
+                top: 5,
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundImage:
+                      AssetImage('assets/images/home/Ellipse 69.png'),
+                ),
+              )
+            ],
+          ),
+          const Directionality(
+            textDirection: TextDirection.rtl,
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(
+                "اهلا مستخدم",
+                style: AppTextStyle.textStyle25,
+              ),
+              Text(
+                "اهلا بك في تطبيقك المفضل",
+                style: AppTextStyle.textStyle16,
+              )
+            ]),
+          ),
+        ],
+      ),
     );
   }
 }

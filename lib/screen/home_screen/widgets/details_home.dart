@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:ocdear/screen/home_screen/widgets/slider_home.dart';
+import 'package:ocdear/screen/home_screen/widgets/welcome_widget.dart';
 import 'package:ocdear/utils/text_style.dart';
 
 class DetailsHome extends StatelessWidget {
@@ -13,6 +14,7 @@ class DetailsHome extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
+              const WelcomeWidget(),
               const SizedBox(
                 height: 20,
               ),

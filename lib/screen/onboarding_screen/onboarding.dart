@@ -69,8 +69,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                       child: SmoothPageIndicator(
                                         controller: pageController,
                                         count: contents.length,
-                                        effect: const WormEffect(
-                                            dotWidth: 25,
+                                        effect: const ExpandingDotsEffect(
+                                            dotWidth: 10,
+                                            dotHeight: 13,
                                             activeDotColor: AppColors.dark,
                                             dotColor: AppColors.lightHover,
                                             spacing: 16),
@@ -89,14 +90,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        // Text(
-                                        //   contents[i].title!,
-                                        //   textAlign: TextAlign.center,
-                                        //   style: const TextStyle(
-                                        //     fontSize: 20,
-                                        //     fontWeight: FontWeight.w500,
-                                        //   ),
-                                        // ),
                                         const SizedBox(
                                           height: 10,
                                         ),
@@ -179,7 +172,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               : IconButton(
                   icon: SvgPicture.asset("assets/icons/skip.svg"),
                   onPressed: () {
-                    pageController.jumpToPage(3);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginScreen(),
+                        ));
                   })
         ]);
   }

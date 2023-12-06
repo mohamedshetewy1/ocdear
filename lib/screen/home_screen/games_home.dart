@@ -3,8 +3,8 @@ import 'package:ocdear/screen/home_screen/widgets/slider_home.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
-class Games_Home extends StatelessWidget {
-  const Games_Home({super.key});
+class GamesHome extends StatelessWidget {
+  const GamesHome({super.key});
 
   @override
   Widget build(BuildContext context) {
