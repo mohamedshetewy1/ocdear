@@ -2,8 +2,10 @@ import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ocdear/screen/home_screen/games_home.dart';
+import 'package:ocdear/screen/home_screen/games_tap.dart';
 import 'package:ocdear/screen/home_screen/learning_tap.dart';
+import 'package:ocdear/screen/home_screen/mission_tap.dart';
+import 'package:ocdear/screen/home_screen/personal_page_tap.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/screen/home_screen/widgets/details_home.dart';
 
@@ -29,12 +31,8 @@ class _HomePageState extends State<HomePage> {
     const DetailsHome(),
     const LearningTab(),
     const GamesHome(),
-    Container(
-      color: Colors.pinkAccent,
-    ),
-    Container(
-      color: Colors.greenAccent,
-    ),
+    const MissionTap(),
+    const PersonalPage()
   ];
   @override
   Widget build(BuildContext context) {

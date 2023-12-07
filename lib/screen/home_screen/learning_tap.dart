@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:ocdear/screen/home_screen/widgets/slider_home.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
@@ -38,37 +39,106 @@ class LearningTab extends StatelessWidget {
               ),
               const Directionality(
                 textDirection: TextDirection.rtl,
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 15),
-                      child: Text(
-                        'شرح الوسواس القهري',
-                        style: AppTextStyle.textStyle22,
+                child: SingleChildScrollView(
+                  child: Row(
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(right: 15),
+                            child: Text(
+                              'شرح الوسواس القهري',
+                              style: AppTextStyle.textStyle22,
+                            ),
+                          )
+                        ],
                       ),
-                    )
-                  ],
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    width: 155,
-                    height: 117,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/home/video.png"))),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                    ],
                   ),
-                  Container(
-                    width: 155,
-                    height: 117,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/home/video.png"))),
-                  ),
-                ],
+                ),
               ),
               const SizedBox(height: 20),
               const Directionality(
@@ -86,24 +156,87 @@ class LearningTab extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    width: 155,
-                    height: 117,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/home/video.png"))),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                    ],
                   ),
-                  Container(
-                    width: 155,
-                    height: 117,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/home/video.png"))),
-                  ),
-                ],
+                ),
               ),
               const SizedBox(height: 20),
               const Directionality(
@@ -121,24 +254,87 @@ class LearningTab extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    width: 155,
-                    height: 117,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/home/video.png"))),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                    ],
                   ),
-                  Container(
-                    width: 155,
-                    height: 117,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/home/video.png"))),
-                  ),
-                ],
+                ),
               ),
               const SizedBox(height: 20),
             ],

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:ocdear/screen/home_screen/games_tap.dart';
+import 'package:ocdear/screen/home_screen/learning_tap.dart';
 
 import 'package:ocdear/screen/home_screen/widgets/slider_home.dart';
 import 'package:ocdear/screen/home_screen/widgets/welcome_widget.dart';
+import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
 class DetailsHome extends StatelessWidget {
@@ -22,79 +26,178 @@ class DetailsHome extends StatelessWidget {
               const SizedBox(
                 height: 32,
               ),
-              const Directionality(
+              Directionality(
                 textDirection: TextDirection.rtl,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.only(right: 15),
                       child: Text(
-                        'مغامرة الوسواس القهري',
+                        'فيديوهات تعليمية',
                         style: AppTextStyle.textStyle22,
                       ),
                     ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushReplacement(MaterialPageRoute(
+                            builder: (_) => const LearningTab(),
+                          ));
+                        },
+                        child: const Text(
+                          'عرض المزيد',
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: AppColors.normalActive,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600),
+                        ))
                   ],
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+              const SizedBox(height: 10),
+              Column(
                 children: [
-                  Column(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Container(
-                        width: 200,
-                        height: 155,
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/home/games.png"))),
-                      ),
-                      Container(
-                        width: 200,
-                        height: 70,
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/home/text games.png"))),
-                      ),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
                     ],
                   ),
-                  Column(
+                  const SizedBox(height: 15),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Container(
-                        width: 200,
-                        height: 155,
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/home/games.png"))),
-                      ),
-                      Container(
-                        width: 200,
-                        height: 70,
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/home/text games.png"))),
-                      ),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
+                      Stack(children: [
+                        Container(
+                            height: 117,
+                            width: 170,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        "assets/images/home/video.png"))),
+                            child: Padding(
+                              padding: const EdgeInsets.all(35),
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.white,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: SvgPicture.asset(
+                                    "assets/icons/Polygon 1.svg",
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ]),
                     ],
-                  )
+                  ),
                 ],
               ),
               const SizedBox(
                 height: 20,
               ),
-              const Directionality(
+              Directionality(
                 textDirection: TextDirection.rtl,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.only(right: 15),
                       child: Text(
-                        'مغامرة الوسواس القهري',
+                        'فيديوهات تعليمية',
                         style: AppTextStyle.textStyle22,
                       ),
-                    )
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushReplacement(MaterialPageRoute(
+                            builder: (_) => const GamesHome(),
+                          ));
+                        },
+                        child: const Text(
+                          'عرض المزيد',
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: AppColors.normalActive,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600),
+                        ))
                   ],
                 ),
               ),
