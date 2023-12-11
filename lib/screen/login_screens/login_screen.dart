@@ -3,7 +3,7 @@ import 'package:ocdear/components/custom_text_field.dart';
 import 'package:ocdear/components/google_button.dart';
 import 'package:ocdear/components/main_button.dart';
 import 'package:ocdear/components/main_logo.dart';
-import 'package:ocdear/screen/home_screen/home_page.dart';
+import 'package:ocdear/screen/home/home_screen/home_page.dart';
 import 'package:ocdear/screen/login_screens/forget_password.dart';
 import 'package:ocdear/screen/sign_up_screen/sign_up_screen.dart';
 
@@ -152,8 +152,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (_) =>
-                              const SignUpScreen(), // حط الاسكرين اللي عايز تظهرها بعد الاسبلاش هنا
+                          builder: (_) => const SignUpScreen(),
                         ));
                       },
                       child: const Text(

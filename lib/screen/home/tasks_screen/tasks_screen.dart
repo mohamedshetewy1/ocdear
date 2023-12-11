@@ -4,8 +4,8 @@ import 'package:ocdear/components/custom_text_field.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
-class MissionTap extends StatelessWidget {
-  const MissionTap({super.key});
+class TasksScreen extends StatelessWidget {
+  const TasksScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

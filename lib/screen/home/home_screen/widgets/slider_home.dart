@@ -34,7 +34,7 @@ class _SliderHomePageState extends State<SliderHomePage> {
             horizontal: 20,
           ),
           child: Container(
-            height: 150,
+            height: 160,
             width: double.infinity,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
@@ -47,8 +47,8 @@ class _SliderHomePageState extends State<SliderHomePage> {
                           Directionality(
                             textDirection: TextDirection.rtl,
                             child: SizedBox(
-                              width: 205,
-                              height: 110,
+                              width: 220,
+                              height: 130,
                               child: Center(
                                 child: Text(
                                   item.text,
@@ -58,8 +58,8 @@ class _SliderHomePageState extends State<SliderHomePage> {
                             ),
                           ),
                           Container(
-                            width: 140,
-                            height: 170,
+                            width: 135,
+                            height: 160,
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(item.image)),
@@ -70,8 +70,9 @@ class _SliderHomePageState extends State<SliderHomePage> {
                   .toList(),
               carouselController: carouselController,
               options: CarouselOptions(
+                autoPlayInterval: const Duration(seconds: 10),
                 autoPlay: true,
-                autoPlayAnimationDuration: const Duration(seconds: 5),
+                autoPlayAnimationDuration: const Duration(seconds: 4),
                 scrollPhysics: const BouncingScrollPhysics(),
                 aspectRatio: 2,
                 viewportFraction: 1,

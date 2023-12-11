@@ -2,12 +2,12 @@ import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ocdear/screen/home_screen/games_tap.dart';
-import 'package:ocdear/screen/home_screen/learning_tap.dart';
-import 'package:ocdear/screen/home_screen/mission_tap.dart';
-import 'package:ocdear/screen/home_screen/profile_tap.dart';
+import 'package:ocdear/screen/home/game_screen/games_screen.dart';
+import 'package:ocdear/screen/home/learning_screen/learning_screen.dart';
+import 'package:ocdear/screen/home/profile_screen/profile_screen.dart';
+import 'package:ocdear/screen/home/tasks_screen/tasks_screen.dart';
 import 'package:ocdear/utils/colors.dart';
-import 'package:ocdear/screen/home_screen/widgets/details_home.dart';
+import 'package:ocdear/screen/home/home_screen/widgets/details_home.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -31,8 +31,8 @@ class _HomePageState extends State<HomePage> {
     const DetailsHome(),
     const LearningTab(),
     const GamesHome(),
-    const MissionTap(),
-    const ProfilePage()
+    const TasksScreen(),
+    const ProfileScreen()
   ];
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
               labelStyle: const TextStyle(color: AppColors.dark)),
           CurvedNavigationBarItem(
               child: SvgPicture.asset("assets/icons/home/profile.svg"),
-              label: 'الملف الشخصي',
+              label: 'الملف',
               labelStyle: const TextStyle(
                 color: AppColors.dark,
               )),

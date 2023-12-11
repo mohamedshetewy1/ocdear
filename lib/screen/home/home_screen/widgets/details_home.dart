@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ocdear/screen/home_screen/games_tap.dart';
-import 'package:ocdear/screen/home_screen/learning_tap.dart';
+import 'package:ocdear/screen/home/game_screen/games_screen.dart';
+import 'package:ocdear/screen/home/learning_screen/learning_screen.dart';
 
-import 'package:ocdear/screen/home_screen/widgets/slider_home.dart';
-import 'package:ocdear/screen/home_screen/widgets/welcome_widget.dart';
+import 'package:ocdear/screen/home/home_screen/widgets/slider_home.dart';
+import 'package:ocdear/screen/home/home_screen/widgets/welcome_widget.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 

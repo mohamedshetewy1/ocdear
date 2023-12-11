@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ocdear/screen/home/profile_screen/widget/profile_menu.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -57,101 +57,61 @@ class ProfilePage extends StatelessWidget {
               icon: "assets/icons/profile/Envelope.svg",
               text: "تغيير البريد الإلكتروني",
               press: () {},
+              withDivider: true,
             ),
             ProfileMenu(
               icon: "assets/icons/profile/UserSwitch.svg",
               text: "التغيير الى وضع الوالدين",
+              withDivider: true,
               press: () {},
             ),
             ProfileMenu(
               icon: "assets/icons/profile/Lock.svg",
               text: "تغيير كلمة المرور",
+              withDivider: true,
               press: () {},
             ),
             ProfileMenu(
               icon: "assets/icons/profile/Palette.svg",
               text: " تغيير لون التطبيق",
               press: () {},
+              withDivider: true,
             ),
             ProfileMenu(
               icon: "assets/icons/profile/CameraRotate.svg",
               text: "تغيير الصورة الرمزية",
+              withDivider: true,
               press: () {},
             ),
             const SizedBox(
               height: 40,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-              child: TextButton(
-                onPressed: () {},
-                child: Directionality(
-                  textDirection: TextDirection.rtl,
-                  child: Row(children: [
-                    SvgPicture.asset(
-                      'assets/icons/profile/SignOut.svg',
-                      width: 25,
-                      height: 25,
-                      color: Colors.red,
-                    ),
-                    const SizedBox(
-                      width: 25,
-                    ),
-                    const Text(
-                      "تسجيل الخروج",
-                      style: AppTextStyle.textStyle16,
-                    ),
-                  ]),
-                ),
-              ),
-            )
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+            //   child: TextButton(
+            //     onPressed: () {},
+            //     child: Directionality(
+            //       textDirection: TextDirection.rtl,
+            //       child: Row(children: [
+            //         SvgPicture.asset(
+            //           colorFilter:
+            //               const ColorFilter.mode(Colors.red, BlendMode.dstIn),
+            //           'assets/icons/profile/SignOut.svg',
+            //           width: 25,
+            //           height: 25,
+            //         ),
+            //         const SizedBox(
+            //           width: 25,
+            //         ),
+            //         const Text(
+            //           "تسجيل الخروج",
+            //           style: AppTextStyle.textStyle16,
+            //         ),
+            //       ]),
+            //     ),
+            //   ),
+            // )
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class ProfileMenu extends StatelessWidget {
-  const ProfileMenu({
-    super.key,
-    required this.text,
-    required this.icon,
-    required this.press,
-  });
-  final String? text, icon;
-  final VoidCallback? press;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-      child: Container(
-        decoration: const UnderlineTabIndicator(
-            borderSide: BorderSide(
-          width: 0.5,
-          color: AppColors.greyColor,
-        )),
-        child: TextButton(
-          onPressed: press,
-          child: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Row(children: [
-              SvgPicture.asset(
-                icon!,
-                width: 25,
-                height: 25,
-                color: AppColors.dark,
-              ),
-              const SizedBox(
-                width: 25,
-              ),
-              Text(
-                text!,
-                style: AppTextStyle.textStyle16,
-              ),
-            ]),
-          ),
         ),
       ),
     );
