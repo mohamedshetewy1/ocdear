@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ocdear/screen/home/game_screen/widgets/games_card.dart';
 import 'package:ocdear/screen/home/learning_screen/widgets/content_description.dart';
 import 'package:ocdear/screen/home/home_screen/widgets/slider_home.dart';
 import 'package:ocdear/utils/colors.dart';
@@ -53,57 +54,6 @@ class GamesHome extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class GamesCard extends StatelessWidget {
-  const GamesCard({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Column(
-          children: [
-            Container(
-              width: 200,
-              height: 155,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/home/games.png"))),
-            ),
-            Container(
-              width: 200,
-              height: 70,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/home/text games.png"))),
-            ),
-          ],
-        ),
-        Column(
-          children: [
-            Container(
-              width: 200,
-              height: 155,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/home/games.png"))),
-            ),
-            Container(
-              width: 200,
-              height: 70,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/home/text games.png"))),
-            ),
-          ],
-        )
-      ],
     );
   }
 }

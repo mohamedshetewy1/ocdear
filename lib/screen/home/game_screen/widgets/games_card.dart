@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class GamesCard extends StatelessWidget {
+  final String? image;
   const GamesCard({
     super.key,
+    this.image,
   });
 
   @override

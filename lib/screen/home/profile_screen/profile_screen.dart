@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ocdear/screen/home/profile_screen/widget/profile_menu.dart';
-import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -21,7 +20,7 @@ class ProfileScreen extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
           icon: const Icon(
             Icons.arrow_back,
-            color: AppColors.normalActive,
+            color: Colors.black,
           ),
         ),
         backgroundColor: Colors.white,
@@ -33,21 +32,33 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              height: 250,
+              height: 270,
               decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image:
-                          AssetImage('assets/images/home/personal page.PNG'))),
+                image: DecorationImage(
+                  image: AssetImage("assets/images/home/profile.jpg"),
+                ),
+              ),
               child: const Column(
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(
-                      vertical: 50,
+                      vertical: 67,
                     ),
-                    child: CircleAvatar(
-                      radius: 45,
-                      backgroundImage:
-                          AssetImage('assets/images/home/Ellipse 69.png'),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 45,
+                          backgroundImage:
+                              AssetImage('assets/images/home/Ellipse 69.png'),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "إسم المستخدم ",
+                          style: AppTextStyle.textStyle22,
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -84,33 +95,15 @@ class ProfileScreen extends StatelessWidget {
               press: () {},
             ),
             const SizedBox(
-              height: 40,
+              height: 45,
             ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-            //   child: TextButton(
-            //     onPressed: () {},
-            //     child: Directionality(
-            //       textDirection: TextDirection.rtl,
-            //       child: Row(children: [
-            //         SvgPicture.asset(
-            //           colorFilter:
-            //               const ColorFilter.mode(Colors.red, BlendMode.dstIn),
-            //           'assets/icons/profile/SignOut.svg',
-            //           width: 25,
-            //           height: 25,
-            //         ),
-            //         const SizedBox(
-            //           width: 25,
-            //         ),
-            //         const Text(
-            //           "تسجيل الخروج",
-            //           style: AppTextStyle.textStyle16,
-            //         ),
-            //       ]),
-            //     ),
-            //   ),
-            // )
+            ProfileMenu(
+              icon: "assets/icons/profile/SignOut.svg",
+              color: Colors.red,
+              text: "تسجيل الخروج",
+              withDivider: false,
+              press: () {},
+            ),
           ],
         ),
       ),

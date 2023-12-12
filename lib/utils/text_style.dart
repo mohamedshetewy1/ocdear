@@ -24,4 +24,9 @@ class AppTextStyle {
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.w100,
       color: AppColors.black);
+  static const textStyle15 = TextStyle(
+      fontSize: 15,
+      fontFamily: 'ReadexPro',
+      fontWeight: FontWeight.w400,
+      color: AppColors.greyColor);
 }

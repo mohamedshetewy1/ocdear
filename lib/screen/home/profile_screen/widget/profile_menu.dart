@@ -21,7 +21,9 @@ class ProfileMenu extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 3.2),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+          ),
           child: TextButton(
             onPressed: press,
             child: Directionality(
@@ -34,11 +36,11 @@ class ProfileMenu extends StatelessWidget {
                   color: color,
                 ),
                 const SizedBox(
-                  width: 25,
+                  width: 20,
                 ),
                 Text(
                   text!,
-                  style: AppTextStyle.textStyle16,
+                  style: AppTextStyle.textStyle14,
                 ),
               ]),
             ),
@@ -47,8 +49,8 @@ class ProfileMenu extends StatelessWidget {
         Visibility(
           visible: withDivider ?? false,
           child: const Divider(
-            indent: 40,
-            endIndent: 40,
+            indent: 30,
+            endIndent: 30,
           ),
         )
       ],

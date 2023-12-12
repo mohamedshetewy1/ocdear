@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ocdear/screen/home/learning_screen/widgets/content_description.dart';
 import 'package:ocdear/screen/home/home_screen/widgets/slider_home.dart';
-import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
 import 'widgets/video_card.dart';
@@ -25,7 +24,7 @@ class LearningTab extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             icon: const Icon(
               Icons.arrow_back,
-              color: AppColors.normalActive,
+              color: Colors.black,
             ),
           ),
           backgroundColor: Colors.white,
