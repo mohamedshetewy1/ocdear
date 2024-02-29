@@ -52,13 +52,13 @@ class _EnterCodeState extends State<EnterCode> {
                 ),
                 const Text("ادخل الرمز",
                     textAlign: TextAlign.start,
-                    style: AppTextStyle.textStyle25),
+                    style: AppTextStyle.textStyleNormal20),
                 const SizedBox(height: 14),
                 const Row(
                   children: [
                     Text("الرجاء ادخال الرمز المكون من",
                         textAlign: TextAlign.start,
-                        style: AppTextStyle.textStyle16),
+                        style: AppTextStyle.textStyleBlack17),
                     Text(
                       "٤ ",
                       textAlign: TextAlign.start,
@@ -69,7 +69,7 @@ class _EnterCodeState extends State<EnterCode> {
                     ),
                     Text("ارقام",
                         textAlign: TextAlign.start,
-                        style: AppTextStyle.textStyle16),
+                        style: AppTextStyle.textStyleBlack17),
                   ],
                 ),
                 const SizedBox(height: 20),

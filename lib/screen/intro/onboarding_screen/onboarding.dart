@@ -101,7 +101,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                         ),
                                         Text(contents[i].description!,
                                             textAlign: TextAlign.center,
-                                            style: AppTextStyle.textStyle16),
+                                            style:
+                                                AppTextStyle.textStyleBlack17),
                                         const SizedBox(
                                           height: 75,
                                         ),

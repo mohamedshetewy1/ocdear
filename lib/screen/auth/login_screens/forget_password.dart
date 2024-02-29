@@ -44,7 +44,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   const MainLogo(),
                   const Text("هل نسيت كلمة السر؟",
                       textAlign: TextAlign.start,
-                      style: AppTextStyle.textStyle25),
+                      style: AppTextStyle.textStyleNormal20),
                   const SizedBox(height: 14),
                   const Text(
                     "من فضلك ادخل البريد الالكتروني او رقم الهاتف المرتبط\n بالتطبيق",

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ocdear/components/main_logo.dart';
-import 'package:ocdear/screen/child_mode/home/home_screen/home_page.dart';
+import 'package:ocdear/screen/child_mode/navigation_child/nav_child.dart';
 import 'package:ocdear/screen/child_mode/questions_screens/widgets/quiz_screen.dart';
 import 'package:ocdear/utils/colors.dart';
 
@@ -25,7 +25,7 @@ class Questions extends StatelessWidget {
               onPressed: () {
                 Navigator.pushAndRemoveUntil(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
+                  MaterialPageRoute(builder: (context) => const NavChild()),
                   (route) => false,
                 );
               },
@@ -51,11 +51,11 @@ class Questions extends StatelessWidget {
                 MainLogo(),
                 Text("الاسئلة",
                     textAlign: TextAlign.start,
-                    style: AppTextStyle.textStyle25),
+                    style: AppTextStyle.textStyleNormal20),
                 SizedBox(height: 14),
                 Text("برجاء اختيار إجابه واحدة فقط",
                     textAlign: TextAlign.start,
-                    style: AppTextStyle.textStyle14),
+                    style: AppTextStyle.textStyleBlack14),
                 SizedBox(height: 20),
                 QuizScreen(),
                 SizedBox(height: 60),

@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Text("اهلا بيك في تطبيقنا ",
                         textAlign: TextAlign.end,
-                        style: AppTextStyle.textStyle14),
+                        style: AppTextStyle.textStyleBlack14),
                   ],
                 ),
                 const SizedBox(height: 20),

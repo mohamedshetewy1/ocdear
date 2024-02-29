@@ -44,7 +44,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               children: [
                 const MainLogo(),
                 const Text("! هيا نبدأ",
-                    textAlign: TextAlign.end, style: AppTextStyle.textStyle25),
+                    textAlign: TextAlign.end,
+                    style: AppTextStyle.textStyleNormal20),
                 const SizedBox(height: 14),
                 const Directionality(
                   textDirection: TextDirection.rtl,
@@ -52,7 +53,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     children: [
                       Text("اهلا بيك في تطبيقنا ",
                           textAlign: TextAlign.start,
-                          style: AppTextStyle.textStyle14),
+                          style: AppTextStyle.textStyleBlack14),
                       Text(
                         "OCDEAR",
                         textAlign: TextAlign.start,

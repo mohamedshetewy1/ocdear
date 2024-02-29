@@ -56,11 +56,11 @@ class _NewPasswordState extends State<NewPassword> {
                   const MainLogo(),
                   const Text("كتابة كلمة المرور الجديدة",
                       textAlign: TextAlign.start,
-                      style: AppTextStyle.textStyle25),
+                      style: AppTextStyle.textStyleNormal20),
                   const SizedBox(height: 14),
                   const Text("يجب ان تكون كلمة المرور مختلفه",
                       textAlign: TextAlign.start,
-                      style: AppTextStyle.textStyle14),
+                      style: AppTextStyle.textStyleBlack14),
                   const SizedBox(height: 20),
                   PasswordFormField(
                     controller: passwordController,

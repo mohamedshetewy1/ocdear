@@ -2,25 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:ocdear/utils/colors.dart';
 
 class AppTextStyle {
-  static const textStyleGrey16 = TextStyle(
-      fontSize: 16,
-      fontFamily: 'ReadexPro',
-      fontWeight: FontWeight.w500,
-      color: AppColors.greyColor);
-
-  static const textStyleGrey18 = TextStyle(
-      fontSize: 18,
-      fontFamily: 'ReadexPro',
-      fontWeight: FontWeight.w500,
-      color: AppColors.greyColor);
-
-  static const textStyle25 = TextStyle(
+  static const textStyleNormal20 = TextStyle(
       fontSize: 20,
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.bold,
       color: AppColors.normalActive);
 
-  static const textStyleDark15 = TextStyle(
+  static const textStyleNormal15 = TextStyle(
       fontSize: 15,
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.w500,
@@ -31,11 +19,20 @@ class AppTextStyle {
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.w700,
       color: AppColors.black);
-
-  static const textStyle16 = TextStyle(
+  static const textStyleBold18 = TextStyle(
+      fontSize: 18,
+      fontFamily: 'ReadexPro',
+      fontWeight: FontWeight.w600,
+      color: AppColors.black);
+  static const textStyleBlack17 = TextStyle(
       fontSize: 17,
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.w100,
+      color: AppColors.black);
+  static const textStyleBlackBold16 = TextStyle(
+      fontSize: 16,
+      fontFamily: 'ReadexPro',
+      fontWeight: FontWeight.w600,
       color: AppColors.black);
 
   static const textStyle16w500 = TextStyle(
@@ -44,11 +41,16 @@ class AppTextStyle {
       fontWeight: FontWeight.w500,
       color: AppColors.black);
 
-  static const textStyle14 = TextStyle(
+  static const textStyleBlack14 = TextStyle(
       fontSize: 14,
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.w100,
       color: AppColors.black);
+  static const textStyleBlack10 = TextStyle(
+      fontSize: 10,
+      fontFamily: 'ReadexPro',
+      fontWeight: FontWeight.w400,
+      color: Colors.black);
 
   static const textStyleGrey14 = TextStyle(
       fontSize: 13,
@@ -61,18 +63,16 @@ class AppTextStyle {
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.w400,
       color: AppColors.greyColor);
-
-  static const textStyleBold18 = TextStyle(
-      fontSize: 18,
-      fontFamily: 'ReadexPro',
-      fontWeight: FontWeight.w600,
-      color: AppColors.black);
-
-  static const textStyleBold16 = TextStyle(
+  static const textStyleGrey16 = TextStyle(
       fontSize: 16,
       fontFamily: 'ReadexPro',
-      fontWeight: FontWeight.w600,
-      color: AppColors.black);
+      fontWeight: FontWeight.w500,
+      color: AppColors.greyColor);
+  static const textStyleGrey18 = TextStyle(
+      fontSize: 18,
+      fontFamily: 'ReadexPro',
+      fontWeight: FontWeight.w500,
+      color: AppColors.greyColor);
 
   static const textStyleMain20 = TextStyle(
       fontSize: 20,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ocdear/components/main_button.dart';
-import 'package:ocdear/screen/child_mode/avatar_and_color_screen/avatar_and_color_screen.dart';
+import 'package:ocdear/screen/intro/avatar_and_color_screen/avatar_and_color_screen.dart';
 import 'package:ocdear/utils/colors.dart';
 
 class ResultPage extends StatelessWidget {
