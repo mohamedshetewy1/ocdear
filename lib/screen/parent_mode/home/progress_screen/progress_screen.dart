@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ocdear/screen/parent_mode/home/progress_screen/charts/bar%20graph/chart_progress.dart';
 import 'package:ocdear/screen/parent_mode/home/progress_screen/charts/pie_chart/pie_chart.dart';
 import 'package:ocdear/screen/parent_mode/home/widgets/welcome_parent.dart';
 import '../widgets/slider_p.dart';
@@ -18,13 +19,20 @@ class ProgressScreen extends StatelessWidget {
               const SizedBox(height: 25),
               const SliderParent(),
 
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.3,
-                child: Image.asset(
-                  "assets/images/progress_1.png",
-                  fit: BoxFit.fill,
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
+                  padding: const EdgeInsets.all(15),
+                  width: 329,
+                  height: 282,
+                  decoration: BoxDecoration(
+                    color: const Color(0xffFFFFFF),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const BarChartProgress(),
                 ),
               ),
+
               const SizedBox(height: 25),
               const MYPieChart(),
 

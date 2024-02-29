@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:ocdear/screen/parent_mode/home/chat_screen/widget/custom_card_chat.dart';
 import 'package:ocdear/screen/parent_mode/home/doctors_screen/widget/search_field.dart';
 import 'package:ocdear/screen/parent_mode/home/home_page_p.dart';
 import 'package:ocdear/utils/colors.dart';
@@ -36,12 +38,30 @@ class ChatScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
       ),
-      body: const SingleChildScrollView(
-        child: Column(
-          children: [
-            SearchField(),
-          ],
-        ),
+      body: SingleChildScrollView(
+        child: Column(children: [
+          const SizedBox(
+            height: 20,
+          ),
+          const SearchField(),
+          const SizedBox(
+            height: 20,
+          ),
+          SizedBox(
+            height: MediaQuery.sizeOf(context).height * .7,
+            child: ListView.separated(
+              itemCount: 20,
+              // physics: const NeverScrollableScrollPhysics(),
+              // shrinkWrap: true,
+              separatorBuilder: (context, index) => const Gap(10),
+              itemBuilder: (context, index) => const CustomCardChat(
+                image: "assets/images/ai_chat.png",
+                title: "AI Chat",
+                subtitle: " ......اهلا دكتورة سارة محتاجه حضرتك ",
+              ),
+            ),
+          ),
+        ]),
       ),
     );
   }
