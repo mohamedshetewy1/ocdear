@@ -13,6 +13,11 @@ class AppTextStyle {
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.w500,
       color: AppColors.dark);
+  static const textStyleNormal17 = TextStyle(
+      fontSize: 17,
+      fontFamily: 'ReadexPro',
+      fontWeight: FontWeight.w500,
+      color: AppColors.dark);
 
   static const textStyle22 = TextStyle(
       fontSize: 22,

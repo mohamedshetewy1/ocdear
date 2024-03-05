@@ -92,6 +92,8 @@ flutter:
     - assets/icons/
     - assets/icons/home/
     - assets/icons/profile/
+    - assets/icons/chat/
+    
     - assets/images/todo/
     - assets/images/slider_parent/
    

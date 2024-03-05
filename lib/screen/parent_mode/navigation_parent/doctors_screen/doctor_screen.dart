@@ -21,7 +21,7 @@ class DoctorScreen extends StatelessWidget {
           title: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 85),
             child: Text(
-              ' المحادثات',
+              ' أشهر الأطباء',
               style: AppTextStyle.textStyleNormal20,
             ),
           ),

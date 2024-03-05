@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/chat_doctor.dart';
 import 'package:ocdear/utils/text_style.dart';
 
 class CustomCardChat extends StatelessWidget {
@@ -14,20 +15,30 @@ class CustomCardChat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: CircleAvatar(
-        radius: 27,
-        backgroundImage: AssetImage(image!),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const ChatDoctors(),
+          ),
+        );
+      },
+      child: ListTile(
+        leading: CircleAvatar(
+          radius: 27,
+          backgroundImage: AssetImage(image!),
+        ),
+        title: Text(
+          title!,
+          style: AppTextStyle.textStyleBlack14,
+        ),
+        subtitle: Text(
+          subtitle!,
+          style: AppTextStyle.textStyleGrey14,
+        ),
+        trailing: const Text('07:00 Am'),
       ),
-      title: Text(
-        title!,
-        style: AppTextStyle.textStyleBlack14,
-      ),
-      subtitle: Text(
-        subtitle!,
-        style: AppTextStyle.textStyleGrey14,
-      ),
-      trailing: const Text('07:00 Am'),
     );
   }
 }
