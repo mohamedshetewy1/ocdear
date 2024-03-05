@@ -28,7 +28,7 @@ class GamesCard extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      width: 150,
+                      width: 160,
                       height: 155,
                       decoration: const BoxDecoration(
                           image: DecorationImage(
@@ -36,8 +36,8 @@ class GamesCard extends StatelessWidget {
                               fit: BoxFit.fill)),
                     ),
                     Container(
-                      width: 150,
-                      height: 60,
+                      width: 160,
+                      height: 50,
                       decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(

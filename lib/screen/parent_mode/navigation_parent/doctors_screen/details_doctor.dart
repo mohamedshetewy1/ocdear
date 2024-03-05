@@ -82,7 +82,7 @@ class DetailsDoctors extends StatelessWidget {
                           height: 15,
                         ),
                         const SizedBox(
-                          width: 5,
+                          width: 2,
                         ),
                         const Text(
                           " المنصوره ,شارع الجلاء",

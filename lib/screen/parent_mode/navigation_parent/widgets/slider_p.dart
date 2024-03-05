@@ -13,13 +13,13 @@ class SliderParent extends StatefulWidget {
 
 class _SliderHomePageState extends State<SliderParent> {
   List<SliderModel> imageList = [
-    SliderModel("1", "assets/images/slider_p/mother.jpg",
+    SliderModel("1", "assets/images/slider_parent/mother.png",
         "تابع التقدم الذي يصل إليه طفلك و متابعة شعوره اليومي والتحدث إلي الاطباء المتخصصون في تشخيص حالة طفلك."),
-    SliderModel("2", "assets/images/slider_p/mother.jpg",
+    SliderModel("2", "assets/images/slider_parent/mother.png",
         "تابع التقدم الذي يصل إليه طفلك و متابعة شعوره اليومي والتحدث إلي الاطباء المتخصصون في تشخيص حالة طفلك."),
-    SliderModel("3", "assets/images/slider_p/mother.jpg",
+    SliderModel("3", "assets/images/slider_parent/mother.png",
         "تابع التقدم الذي يصل إليه طفلك و متابعة شعوره اليومي والتحدث إلي الاطباء المتخصصون في تشخيص حالة طفلك."),
-    SliderModel("4", "assets/images/slider_p/mother.jpg",
+    SliderModel("4", "assets/images/slider_parent/mother.png",
         "تابع التقدم الذي يصل إليه طفلك و متابعة شعوره اليومي والتحدث إلي الاطباء المتخصصون في تشخيص حالة طفلك."),
   ];
   final CarouselController carouselController = CarouselController();
@@ -35,59 +35,72 @@ class _SliderHomePageState extends State<SliderParent> {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: SizedBox(
             width: double.infinity,
-            height: 155,
+            height: 165,
             child: CarouselSlider(
               items: imageList
                   .map((item) => Padding(
                         padding: const EdgeInsets.only(top: 15),
-                        child: Container(
-                          height: 140,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: AppColors.lightHover),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                width: 170,
-                                height: 150,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/slider_parent/Vector.png"),
-                                  ),
-                                ),
-                                child: const Image(
-                                  image: AssetImage(
-                                      "assets/images/slider_parent/mother.png"),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 10),
-                                child: Directionality(
-                                  textDirection: TextDirection.rtl,
-                                  child: SizedBox(
-                                    width: 190,
+                        child: Stack(
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.only(top: 10),
+                              height: 140,
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: AppColors.lightHover),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Container(
+                                    width: 170,
                                     height: 150,
-                                    child: Center(
-                                      child: Text(
-                                        item.text,
-                                        style: AppTextStyle.textStyleBlack14,
+                                    decoration: const BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/images/slider_parent/Vector.png"),
+                                      ),
+                                    ),
+                                    // child: const Image(
+                                    //   image: AssetImage(
+                                    //       "assets/images/slider_parent/mother.png"),
+                                    // ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 10),
+                                    child: Directionality(
+                                      textDirection: TextDirection.rtl,
+                                      child: SizedBox(
+                                        width: 190,
+                                        height: 150,
+                                        child: Center(
+                                          child: Text(
+                                            item.text,
+                                            style:
+                                                AppTextStyle.textStyleBlack14,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            Positioned(
+                              left: 35,
+                              child: Image(
+                                image: AssetImage(item.image),
+                              ),
+                            )
+                          ],
                         ),
                       ))
                   .toList(),
               carouselController: carouselController,
               options: CarouselOptions(
                 autoPlayInterval: const Duration(seconds: 10),
-                autoPlay: false,
+                autoPlay: true,
                 autoPlayAnimationDuration: const Duration(seconds: 4),
                 scrollPhysics: const BouncingScrollPhysics(),
                 aspectRatio: 2,

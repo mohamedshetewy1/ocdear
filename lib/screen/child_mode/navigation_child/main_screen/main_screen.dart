@@ -100,9 +100,12 @@ class MainScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [GamesCard(), GamesCard()],
+              const Padding(
+                padding: EdgeInsets.only(right: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [GamesCard(), GamesCard()],
+                ),
               )
             ],
           ),

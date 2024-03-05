@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
@@ -10,18 +11,21 @@ class ChatDoctors extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 50),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.black,
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 50),
+                child: Row(children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: const Icon(
+                        Icons.arrow_back,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                   CircleAvatar(
@@ -32,6 +36,7 @@ class ChatDoctors extends StatelessWidget {
                       'assets/images/user_chat.png',
                     ),
                   ),
+                  const Gap(20),
                   const Column(
                     children: [
                       Text(
@@ -48,12 +53,17 @@ class ChatDoctors extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 10),
-                    child: IconButton(
-                        onPressed: () {}, icon: const Icon(Icons.more_vert)),
+                  const Gap(130),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.more_vert,
+                      size: 30,
+                    ),
                   )
                 ]),
+              ),
+            ],
           )
         ],
       ),

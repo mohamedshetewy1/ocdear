@@ -21,7 +21,7 @@ class DoctorsCard extends StatelessWidget {
               border: Border.all(color: AppColors.normal),
               borderRadius: const BorderRadius.all(Radius.circular(10))),
           width: 190,
-          height: 250,
+          height: 260,
           child: Column(
             children: [
               Padding(
@@ -56,17 +56,15 @@ class DoctorsCard extends StatelessWidget {
                         children: [
                           SvgPicture.asset(
                             "assets/icons/location.svg",
-                            width: 15,
-                            height: 15,
+                            width: 13,
+                            height: 13,
                           ),
                           const SizedBox(
-                            width: 5,
+                            width: 2,
                           ),
-                          const Center(
-                            child: Text(
-                              "المنصوره ,شارع الجلاء",
-                              style: AppTextStyle.textStyleGrey14,
-                            ),
+                          const Text(
+                            "المنصوره ,شارع الجلاء",
+                            style: AppTextStyle.textStyleGrey14,
                           )
                         ],
                       ),
