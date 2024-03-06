@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ocdear/components/main_button.dart';
 import 'package:ocdear/components/password_field.dart';
+import 'package:ocdear/screen/child_mode/navigation_child/nav_child.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/profile_screen/widget/profile_menu.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/profile_screen/widget/show_dialogs/change_email_dialog.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/profile_screen/widget/show_dialogs/change_password_dialog.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/profile_screen/widget/show_dialogs/logout_dialog.dart';
-import 'package:ocdear/screen/child_mode/navigation_child/profile_screen/widget/show_dialogs/parent_mode_dialog.dart';
 import 'package:ocdear/screen/auth/login_screens/forget_password.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
@@ -98,7 +98,12 @@ class _ProfileScreenState extends State<ParentProfile> {
                 icon: "assets/icons/profile/UserSwitch.svg",
                 text: "التغيير الى وضع الطفل",
                 press: () {
-                  changeParentModeDialog(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const NavChild(),
+                    ),
+                  );
                 },
                 withDivider: true,
               ),

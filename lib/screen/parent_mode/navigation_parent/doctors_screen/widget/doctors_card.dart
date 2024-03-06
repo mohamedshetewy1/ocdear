@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/details_doctor.dart';
+import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/details_doctors/details_doctor.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 

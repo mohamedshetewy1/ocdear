@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/chat_doctor.dart';
+import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/chat_doctors/chat_doctor.dart';
 import 'package:ocdear/utils/text_style.dart';
 
 class CustomCardChat extends StatelessWidget {

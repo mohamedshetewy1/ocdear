@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/chat_doctor.dart';
-import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/reservation_doctors.dart';
+import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/chat_doctors/chat_doctor.dart';
+import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/reservation/reservation_online.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
@@ -155,7 +155,7 @@ class DetailsDoctors extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const ReservationDoctors(),
+                        builder: (context) => const ReservationOnLine(),
                       ),
                     );
                   },

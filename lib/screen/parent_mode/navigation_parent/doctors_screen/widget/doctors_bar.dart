@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/list_doctors.dart';
+import 'package:ocdear/screen/parent_mode/navigation_parent/doctors_screen/list_doctors/list_doctors.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
