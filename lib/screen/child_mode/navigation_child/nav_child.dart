@@ -3,7 +3,6 @@ import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/game_screen/games_screen.dart';
-import 'package:ocdear/screen/child_mode/navigation_child/main_screen/main_screen.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/learning_screen/learning_screen.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/profile_screen/profile_screen.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/todo_screen/todo_tab.dart';
@@ -28,7 +27,6 @@ class _NavChildState extends State<NavChild> {
   }
 
   final List<Widget> _screens = [
-    const MainScreen(),
     const LearningTab(),
     const GamesHome(),
     const TodoTab(),
@@ -50,10 +48,6 @@ class _NavChildState extends State<NavChild> {
         backgroundColor: Colors.white,
         index: _selectedIndex,
         items: [
-          CurvedNavigationBarItem(
-              child: SvgPicture.asset("assets/icons/home/home.svg"),
-              label: 'الرئيسية',
-              labelStyle: AppTextStyle.textStyleNormal15),
           CurvedNavigationBarItem(
               child: SvgPicture.asset("assets/icons/home/learn.svg"),
               label: 'التعلم',

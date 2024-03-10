@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ocdear/screen/auth/login_screens/login_screen.dart';
+import 'package:ocdear/screen/intro/onboarding_screen/doctor_or_parent.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/screen/intro/onboarding_screen/contents_model.dart';
 import 'package:ocdear/utils/text_style.dart';
@@ -102,7 +103,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                         Text(contents[i].description!,
                                             textAlign: TextAlign.center,
                                             style:
-                                                AppTextStyle.textStyleBlack17),
+                                                AppTextStyle.textStyleGrey16),
                                         const SizedBox(
                                           height: 75,
                                         ),
@@ -127,7 +128,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                                       context,
                                                       MaterialPageRoute(
                                                         builder: (context) =>
-                                                            const LoginScreen(),
+                                                            const DoctorOrParent(),
                                                       ))
                                                   : pageController.nextPage(
                                                       duration: const Duration(
@@ -137,9 +138,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                             child: Text(
                                               lastPage ? "هيا نبدأ" : 'التالى',
                                               style: TextStyle(
-                                                  color: lastPage
-                                                      ? Colors.white
-                                                      : AppColors.dark),
+                                                color: lastPage
+                                                    ? Colors.white
+                                                    : AppColors.dark,
+                                                fontSize: 18,
+                                                fontFamily: 'ReadexPro',
+                                              ),
                                             ),
                                           ),
                                         ),

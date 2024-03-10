@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/game_screen/widgets/games_card.dart';
-import 'package:ocdear/screen/child_mode/navigation_child/main_screen/widgets/slider_home.dart';
+import 'package:ocdear/screen/child_mode/navigation_child/widget/slider_home.dart';
 import 'package:ocdear/screen/child_mode/navigation_child/widget/content_description.dart';
 import 'package:ocdear/utils/text_style.dart';
 
@@ -32,19 +32,7 @@ class GamesHome extends StatelessWidget {
               ),
               ContentDescription(description: "مغامرة الوسواس القهري"),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [GamesCard(), GamesCard()],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ContentDescription(description: "مغامرة الوسواس القهري"),
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [GamesCard(), GamesCard()],
-              ),
+              GamesCard(),
               SizedBox(
                 height: 20,
               ),

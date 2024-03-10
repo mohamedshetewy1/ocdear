@@ -58,7 +58,12 @@ class AppTextStyle {
       color: Colors.black);
 
   static const textStyleGrey14 = TextStyle(
-      fontSize: 13,
+      fontSize: 14,
+      fontFamily: 'ReadexPro',
+      fontWeight: FontWeight.w500,
+      color: AppColors.greyColor);
+  static const textStyleGrey12 = TextStyle(
+      fontSize: 12,
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.w500,
       color: AppColors.greyColor);
