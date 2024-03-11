@@ -29,13 +29,18 @@ class GamesCard extends StatelessWidget {
               child: Container(
                 width: 370,
                 height: 370,
-                decoration: const BoxDecoration(color: Colors.white),
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
                 child: Column(
                   children: [
+                    const Gap(5),
                     Container(
                       width: 350,
                       height: 200,
                       decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
                           image: DecorationImage(
                               image: AssetImage(
                                   "assets/images/home/game card.png"),
