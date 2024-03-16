@@ -5,31 +5,34 @@ import 'package:ocdear/components/main_button.dart';
 import 'package:ocdear/components/main_logo.dart';
 import 'package:ocdear/components/password_field.dart';
 import 'package:ocdear/screen/user_app/child_mode/questions_screens/questions.dart';
-import 'package:ocdear/screen/auth/login_screens/forget_password.dart';
-import 'package:ocdear/screen/auth/sign_up_screen/sign_up_screen.dart';
+import 'package:ocdear/screen/auth/login_screens/login_screen.dart';
 
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
-import 'package:ocdear/utils/validator.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreenDoctor extends StatefulWidget {
+  const SignUpScreenDoctor({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreenDoctor> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreenDoctor> {
   bool isPasswordSecure = true;
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => Navigator.pop(context),
+          icon: const Icon(
+            Icons.arrow_back,
+            color: AppColors.normalActive,
+          ),
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
-        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -40,73 +43,76 @@ class _LoginScreenState extends State<LoginScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const MainLogo(),
-                const Text(
-                  " ! مرحبا بعودتك ",
-                  textAlign: TextAlign.end,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.normalActive,
-                    fontFamily: "ReadexPro",
+                const Text("! هيا نبدأ",
+                    textAlign: TextAlign.end,
+                    style: AppTextStyle.textStyleNormal20),
+                const SizedBox(height: 14),
+                const Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: Row(
+                    children: [
+                      Text("اهلا بيك في تطبيقنا ",
+                          textAlign: TextAlign.start,
+                          style: AppTextStyle.textStyleBlack14),
+                      Text(
+                        "OCDEAR",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.normalActive),
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 14),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      "OCDEAR",
-                      textAlign: TextAlign.end,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.normalActive,
-                        fontFamily: "ReadexPro",
-                      ),
-                    ),
-                    Text("اهلا بيك في تطبيقنا ",
-                        textAlign: TextAlign.end,
-                        style: AppTextStyle.textStyleBlack14),
-                  ],
-                ),
                 const SizedBox(height: 20),
-                CustomTextField(
-                  text: "رقم الهاتف او الإيميل",
-                  validator: (value) => Validator.validateEmail(value),
-                  type: TextInputType.emailAddress,
-                  action: TextInputAction.next,
+                Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: CustomTextField(
+                          text: "اسم الطفل",
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      Expanded(
+                        child: CustomTextField(
+                          text: " العمر",
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: CustomTextField(
+                    text: "رقم الهاتف او الايميل",
+                    validator: (value) {
+                      if (value!.isEmpty ||
+                          !RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w]{2,4}')
+                              .hasMatch(value)) {
+                        return "Email isn't correct";
+                      }
+                      return null;
+                    },
+                    type: TextInputType.emailAddress,
+                    action: TextInputAction.next,
+                  ),
                 ),
                 PasswordFormField(
                   text: "كلمة المرور",
-                  validator: (value) => Validator.validatePassword(value!),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return "Password is required";
+                    }
+                    return null;
+                  },
                   type: TextInputType.visiblePassword,
                   action: TextInputAction.done,
                 ),
-                const SizedBox(height: 14),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ForgetPassword(),
-                      ),
-                    );
-                  },
-                  child: const Text(
-                    "هل نسيت كلمة المرور ؟",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: AppColors.normalActive,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: "ReadexPro"),
-                  ),
-                ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 45),
                 MainButton(
-                  text: "تسجيل الدخول",
-                  buttonColor: AppColors.normalActive,
-                  textColor: Colors.white,
                   function: () {
                     if (formKey.currentState?.validate() ?? false) {
                       Navigator.push(
@@ -117,6 +123,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       );
                     }
                   },
+                  text: "إنشاء حساب",
+                  buttonColor: AppColors.normalActive,
+                  textColor: Colors.white,
                 ),
                 const SizedBox(height: 40),
                 Row(
@@ -161,7 +170,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        "ليس لديك حساب ؟ ",
+                        "لديك حساب بالفعل؟ ",
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
@@ -170,13 +179,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context)
-                              .pushReplacement(MaterialPageRoute(
-                            builder: (_) => const SignUpScreen(),
-                          ));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LoginScreen(),
+                              ));
                         },
                         child: const Text(
-                          "انشاء حساب",
+                          "تسجيل الدخول",
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             color: AppColors.normalActive,

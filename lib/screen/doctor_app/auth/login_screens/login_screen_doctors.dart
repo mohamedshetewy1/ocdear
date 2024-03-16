@@ -4,22 +4,22 @@ import 'package:ocdear/components/google_button.dart';
 import 'package:ocdear/components/main_button.dart';
 import 'package:ocdear/components/main_logo.dart';
 import 'package:ocdear/components/password_field.dart';
-import 'package:ocdear/screen/user_app/child_mode/questions_screens/questions.dart';
-import 'package:ocdear/screen/auth/login_screens/forget_password.dart';
-import 'package:ocdear/screen/auth/sign_up_screen/sign_up_screen.dart';
+import 'package:ocdear/screen/doctor_app/auth/login_screens/forget_password.dart';
+import 'package:ocdear/screen/doctor_app/auth/sign_up_screen/sign_up_screen.dart';
+import 'package:ocdear/screen/doctor_app/navigation_doctor/nav_doctor.dart';
 
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 import 'package:ocdear/utils/validator.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginScreenDoctors extends StatefulWidget {
+  const LoginScreenDoctors({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<LoginScreenDoctors> createState() => _LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _LoginScreenState extends State<LoginScreenDoctors> {
   bool isPasswordSecure = true;
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const ForgetPassword(),
+                        builder: (context) => const ForgetPasswordDoctor(),
                       ),
                     );
                   },
@@ -112,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => const Questions(),
+                          builder: (_) => const NavDoctor(),
                         ),
                       );
                     }
@@ -172,7 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         onPressed: () {
                           Navigator.of(context)
                               .pushReplacement(MaterialPageRoute(
-                            builder: (_) => const SignUpScreen(),
+                            builder: (_) => const SignUpScreenDoctor(),
                           ));
                         },
                         child: const Text(

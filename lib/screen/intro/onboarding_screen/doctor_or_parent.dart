@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ocdear/screen/auth/login_screens/login_screen.dart';
+import 'package:ocdear/screen/doctor_app/auth/login_screens/login_screen_doctors.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
@@ -84,7 +85,8 @@ class _OnboardingScreenState extends State<DoctorOrParent> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const LoginScreen(),
+                                  builder: (context) =>
+                                      const LoginScreenDoctors(),
                                 ),
                               );
                             },

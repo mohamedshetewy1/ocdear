@@ -91,4 +91,9 @@ class AppTextStyle {
       color: AppColors.light);
   static const textStyleMain15 =
       TextStyle(fontSize: 15, fontFamily: 'ReadexPro', color: AppColors.light);
+  static const textStylerRed14 = TextStyle(
+      fontSize: 14,
+      fontFamily: 'ReadexPro',
+      fontWeight: FontWeight.w100,
+      color: AppColors.red);
 }

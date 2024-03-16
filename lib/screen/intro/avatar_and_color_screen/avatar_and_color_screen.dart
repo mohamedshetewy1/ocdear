@@ -3,7 +3,7 @@ import 'package:ocdear/components/custom_avatar.dart';
 import 'package:ocdear/components/main_button.dart';
 import 'package:ocdear/components/main_logo.dart';
 import 'package:ocdear/components/pick_app_theme.dart';
-import 'package:ocdear/screen/child_mode/navigation_child/nav_child.dart';
+import 'package:ocdear/screen/user_app/child_mode/navigation_child/nav_child.dart';
 
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
