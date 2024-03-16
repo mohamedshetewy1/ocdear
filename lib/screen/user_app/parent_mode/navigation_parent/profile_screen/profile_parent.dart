@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:ocdear/components/main_button.dart';
 import 'package:ocdear/components/password_field.dart';
 import 'package:ocdear/screen/user_app/child_mode/navigation_child/nav_child.dart';
@@ -42,41 +44,38 @@ class _ProfileScreenState extends State<ParentProfile> {
             style: AppTextStyle.textStyleNormal20,
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(239, 247, 247, 247),
         elevation: 0,
         automaticallyImplyLeading: false,
       ),
-      backgroundColor: const Color(0xFFFFFFFF),
+      backgroundColor: const Color.fromARGB(239, 247, 247, 247),
       body: SingleChildScrollView(
         child: Form(
           key: formKey,
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
-                height: 270,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/home/profile.jpg"),
-                  ),
-                ),
-                child: const Column(
+                height: 220,
+                child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 67,
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 25,
                       ),
                       child: Column(
                         children: [
                           CircleAvatar(
-                            radius: 45,
-                            backgroundImage:
-                                AssetImage('assets/images/home/Ellipse 69.png'),
+                            radius: 55,
+                            backgroundColor:
+                                const Color.fromARGB(255, 210, 207, 207),
+                            child: SvgPicture.asset(
+                                "assets/icons/profile/User.svg"),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
-                          Text(
+                          const Text(
                             "إسم المستخدم ",
                             style: AppTextStyle.textStyle22,
                           ),
@@ -86,135 +85,160 @@ class _ProfileScreenState extends State<ParentProfile> {
                   ],
                 ),
               ),
-              ProfileMenu(
-                icon: "assets/icons/profile/Envelope.svg",
-                text: "تغيير البريد الإلكتروني",
-                press: () {
-                  changeEmailDialog(context);
-                },
-                withDivider: true,
-              ),
-              ProfileMenu(
-                icon: "assets/icons/profile/UserSwitch.svg",
-                text: "التغيير الى وضع الطفل",
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const NavChild(),
+              Container(
+                width: 350,
+                height: 450,
+                decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(15))),
+                child: Column(
+                  children: [
+                    const Gap(15),
+                    ProfileMenu(
+                      icon: "assets/icons/profile/CameraRotate.svg",
+                      text: "تغيير الصورة الشخصيه",
+                      press: () {},
+                      withDivider: true,
                     ),
-                  );
-                },
-                withDivider: true,
-              ),
-              ProfileMenu(
-                icon: "assets/icons/profile/Lock.svg",
-                text: "تغيير كلمة المرور",
-                withDivider: true,
-                press: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) => Dialog(
-                      child: Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        height: 334,
-                        width: 328,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Text(
-                              "تغيير كلمة المرور",
-                              style: AppTextStyle.textStyle16w500,
-                            ),
-                            SizedBox(
-                              height: 70,
-                              child: PasswordFormField(
-                                controller: passwordController,
-                                text: "كلمة المرور الجديدة",
-                                validator: (value) {
-                                  if (value == null || value.isEmpty) {
-                                    return "Password is required";
-                                  }
-                                  return null;
-                                },
-                                type: TextInputType.visiblePassword,
-                                action: TextInputAction.next,
+                    ProfileMenu(
+                      icon: "assets/icons/profile/UserList.svg",
+                      text: "تغيير الإسم",
+                      press: () {},
+                      withDivider: true,
+                    ),
+                    ProfileMenu(
+                      icon: "assets/icons/profile/Envelope.svg",
+                      text: "تغيير البريد الإلكتروني",
+                      press: () {
+                        changeEmailDialog(context);
+                      },
+                      withDivider: true,
+                    ),
+                    ProfileMenu(
+                      icon: "assets/icons/profile/UserSwitch.svg",
+                      text: "التغيير الى وضع الطفل",
+                      press: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NavChild(),
+                          ),
+                        );
+                      },
+                      withDivider: true,
+                    ),
+                    ProfileMenu(
+                      icon: "assets/icons/profile/Lock.svg",
+                      text: "تغيير كلمة المرور",
+                      withDivider: true,
+                      press: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) => Dialog(
+                            child: Container(
+                              padding: const EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
                               ),
-                            ),
-                            SizedBox(
-                              height: 70,
-                              child: PasswordFormField(
-                                controller: confirmPasswordController,
-                                text: "تأكيد كلمة المرور",
-                                validator: (value) {
-                                  if (value == null || value.isEmpty) {
-                                    return "Password is required";
-                                  }
-                                  if (value != passwordController.text) {
-                                    return "Passwords don't match";
-                                  }
-                                  return null;
-                                },
-                                type: TextInputType.visiblePassword,
-                                action: TextInputAction.done,
-                              ),
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ForgetPassword(),
+                              height: 334,
+                              width: 328,
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Text(
+                                    "تغيير كلمة المرور",
+                                    style: AppTextStyle.textStyle16w500,
                                   ),
-                                );
-                              },
-                              child: const Text(
-                                "هل نسيت كلمة المرور ؟",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: AppColors.normalActive,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "ReadexPro"),
+                                  SizedBox(
+                                    height: 70,
+                                    child: PasswordFormField(
+                                      controller: passwordController,
+                                      text: "كلمة المرور الجديدة",
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return "Password is required";
+                                        }
+                                        return null;
+                                      },
+                                      type: TextInputType.visiblePassword,
+                                      action: TextInputAction.next,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 70,
+                                    child: PasswordFormField(
+                                      controller: confirmPasswordController,
+                                      text: "تأكيد كلمة المرور",
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return "Password is required";
+                                        }
+                                        if (value != passwordController.text) {
+                                          return "Passwords don't match";
+                                        }
+                                        return null;
+                                      },
+                                      type: TextInputType.visiblePassword,
+                                      action: TextInputAction.done,
+                                    ),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ForgetPassword(),
+                                        ),
+                                      );
+                                    },
+                                    child: const Text(
+                                      "هل نسيت كلمة المرور ؟",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: AppColors.normalActive,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: "ReadexPro"),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: double.infinity,
+                                    height: 47,
+                                    child: MainButton(
+                                      text: "تغيير",
+                                      function: () {
+                                        if (formKey.currentState?.validate() ??
+                                            false) {
+                                          passwordChangedDialog(context);
+                                        }
+                                      },
+                                      buttonColor: AppColors.normalActive,
+                                    ),
+                                  )
+                                ],
                               ),
                             ),
-                            SizedBox(
-                              width: double.infinity,
-                              height: 47,
-                              child: MainButton(
-                                text: "تغيير",
-                                function: () {
-                                  if (formKey.currentState?.validate() ??
-                                      false) {
-                                    passwordChangedDialog(context);
-                                  }
-                                },
-                                buttonColor: AppColors.normalActive,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
+                          ),
+                        );
+                      },
                     ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 45,
-              ),
-              ProfileMenu(
-                icon: "assets/icons/profile/SignOut.svg",
-                color: Colors.red,
-                text: "تسجيل الخروج",
-                withDivider: false,
-                press: () {
-                  logoutDialog(context);
-                },
+                    const SizedBox(
+                      height: 45,
+                    ),
+                    ProfileMenu(
+                      icon: "assets/icons/profile/SignOut.svg",
+                      color: Colors.red,
+                      text: "تسجيل الخروج",
+                      withDivider: false,
+                      press: () {
+                        logoutDialog(context);
+                      },
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

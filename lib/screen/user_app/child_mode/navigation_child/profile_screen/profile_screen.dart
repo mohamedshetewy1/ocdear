@@ -88,12 +88,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
               ProfileMenu(
-                icon: "assets/icons/profile/CameraRotate.svg",
-                text: "تغيير البريد الإلكتروني",
-                press: () {},
-                withDivider: true,
-              ),
-              ProfileMenu(
                 icon: "assets/icons/profile/Envelope.svg",
                 text: "تغيير البريد الإلكتروني",
                 press: () {

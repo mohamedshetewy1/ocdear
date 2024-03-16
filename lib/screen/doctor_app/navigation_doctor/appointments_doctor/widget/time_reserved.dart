@@ -17,7 +17,7 @@ class CustomTimeReservedDoctor extends StatelessWidget {
       child: const Center(
         child: Text(
           "02:00 pm",
-          style: AppTextStyle.textStyleGrey14,
+          style: AppTextStyle.textStylerRed14,
         ),
       ),
     );

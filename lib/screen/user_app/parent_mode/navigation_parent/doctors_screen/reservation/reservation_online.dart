@@ -87,6 +87,39 @@ class ReservationOnLine extends StatelessWidget {
             ],
           ),
           const Gap(20),
+          const Padding(
+            padding: EdgeInsets.only(right: 10),
+            child: Directionality(
+              textDirection: TextDirection.rtl,
+              child: Row(
+                children: [
+                  Text(
+                    "الاثنين",
+                    style: AppTextStyle.textStyleBlackBold16,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const Gap(20),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              CustomTimeReserved(),
+              CustomTimeAvailable(),
+              CustomTimeAvailable()
+            ],
+          ),
+          const Gap(20),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              CustomTimeAvailable(),
+              CustomTimeReserved(),
+              CustomTimeReserved()
+            ],
+          ),
+          const Gap(20),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -116,27 +149,6 @@ class ReservationOnLine extends StatelessWidget {
                   ),
                 ],
               ),
-            ],
-          ),
-          const Gap(20),
-
-          // CalendarScreen()
-
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              CustomTimeReserved(),
-              CustomTimeAvailable(),
-              CustomTimeAvailable()
-            ],
-          ),
-          const Gap(20),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              CustomTimeAvailable(),
-              CustomTimeReserved(),
-              CustomTimeReserved()
             ],
           ),
           const Gap(40),

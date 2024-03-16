@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ocdear/screen/user_app/child_mode/navigation_child/game_screen/games_screen.dart';
 import 'package:ocdear/screen/user_app/child_mode/navigation_child/learning_screen/learning_screen.dart';
-import 'package:ocdear/screen/user_app/child_mode/navigation_child/profile_screen/profile_doc_screen.dart';
+import 'package:ocdear/screen/user_app/child_mode/navigation_child/profile_screen/profile_screen.dart';
 import 'package:ocdear/screen/user_app/child_mode/navigation_child/todo_screen/todo_tab.dart';
 import 'package:ocdear/utils/text_style.dart';
 

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ocdear/components/main_button.dart';
 import 'package:ocdear/components/password_field.dart';
-import 'package:ocdear/screen/user_app/child_mode/navigation_child/nav_child.dart';
 import 'package:ocdear/screen/user_app/child_mode/navigation_child/profile_screen/widget/profile_menu.dart';
 import 'package:ocdear/screen/user_app/child_mode/navigation_child/profile_screen/widget/show_dialogs/change_email_dialog.dart';
 import 'package:ocdear/screen/user_app/child_mode/navigation_child/profile_screen/widget/show_dialogs/change_password_dialog.dart';

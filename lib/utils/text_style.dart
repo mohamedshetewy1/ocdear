@@ -95,5 +95,5 @@ class AppTextStyle {
       fontSize: 14,
       fontFamily: 'ReadexPro',
       fontWeight: FontWeight.w100,
-      color: AppColors.red);
+      color: Color.fromARGB(255, 255, 0, 0));
 }
