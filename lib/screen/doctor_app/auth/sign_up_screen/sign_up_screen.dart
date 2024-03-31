@@ -4,7 +4,7 @@ import 'package:ocdear/components/google_button.dart';
 import 'package:ocdear/components/main_button.dart';
 import 'package:ocdear/components/main_logo.dart';
 import 'package:ocdear/components/password_field.dart';
-import 'package:ocdear/screen/user_app/child_mode/questions_screens/questions.dart';
+import 'package:ocdear/screen/intro/questions_screens/questions.dart';
 import 'package:ocdear/screen/auth/login_screens/login_screen.dart';
 
 import 'package:ocdear/utils/colors.dart';

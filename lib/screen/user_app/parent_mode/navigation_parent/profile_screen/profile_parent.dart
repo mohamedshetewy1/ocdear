@@ -66,7 +66,7 @@ class _ProfileScreenState extends State<ParentProfile> {
                       child: Column(
                         children: [
                           CircleAvatar(
-                            radius: 55,
+                            radius: 60,
                             backgroundColor:
                                 const Color.fromARGB(255, 210, 207, 207),
                             child: SvgPicture.asset(

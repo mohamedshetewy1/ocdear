@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:ocdear/components/custom_text_field.dart';
 import 'package:ocdear/components/google_button.dart';
 import 'package:ocdear/components/main_button.dart';
 import 'package:ocdear/components/main_logo.dart';
 import 'package:ocdear/components/password_field.dart';
-import 'package:ocdear/screen/user_app/child_mode/questions_screens/questions.dart';
+import 'package:ocdear/screen/intro/questions_screens/questions.dart';
 import 'package:ocdear/screen/auth/login_screens/forget_password.dart';
 import 'package:ocdear/screen/auth/sign_up_screen/sign_up_screen.dart';
 
@@ -26,11 +27,11 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        automaticallyImplyLeading: false,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.white,
+      //   elevation: 0,
+      //   automaticallyImplyLeading: false,
+      // ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -39,6 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                const Gap(35),
                 const MainLogo(),
                 const Text(
                   " ! مرحبا بعودتك ",

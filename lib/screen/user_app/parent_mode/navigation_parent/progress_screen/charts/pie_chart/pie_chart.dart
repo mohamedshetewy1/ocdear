@@ -31,10 +31,12 @@ class MYPieChart extends StatelessWidget {
                       Gap(10),
                       SizedBox(
                         height: 100,
-                        width: 260,
-                        child: Text(
-                          'يُظهر تقدم الطفل في مواجهة التحديات اليومية وتحسين علاقاته الاجتماعية، مما يشير إلى تطور إيجابي في إدارة وسواسه القهري.',
-                          style: AppTextStyle.textStyleGrey14,
+                        width: 235,
+                        child: Expanded(
+                          child: Text(
+                            'يُظهر تقدم الطفل في مواجهة التحديات اليومية وتحسين علاقاته الاجتماعية، مما يشير إلى تطور إيجابي في إدارة وسواسه القهري.',
+                            style: AppTextStyle.textStyleGrey14,
+                          ),
                         ),
                       )
                     ],
@@ -58,7 +60,7 @@ class MYPieChart extends StatelessWidget {
                     showTitle: false,
                   ),
                   PieChartSectionData(
-                    value: 20,
+                    value: 25,
                     color: Colors.grey.shade400,
                     radius: 10,
                     showTitle: false,
@@ -68,7 +70,7 @@ class MYPieChart extends StatelessWidget {
             ),
           ),
           const Positioned(
-            left: 60,
+            left: 35,
             top: 40,
             child: Text(
               "75%",

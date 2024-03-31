@@ -41,7 +41,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       children: [
                         Image.asset(
                           contents[i].image!,
-                          height: 244,
+                          height: 200,
                         ),
                         Stack(
                           children: [
@@ -62,9 +62,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     horizontal: 35, vertical: 20),
                                 child: Column(
                                   children: [
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
                                     Center(
                                       child: SmoothPageIndicator(
                                         controller: pageController,
@@ -84,7 +81,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                       ),
                                     ),
                                     const SizedBox(
-                                      height: 30,
+                                      height: 20,
                                     ),
                                     Column(
                                       crossAxisAlignment:
@@ -104,7 +101,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                             style:
                                                 AppTextStyle.textStyleGrey16),
                                         const SizedBox(
-                                          height: 75,
+                                          height: 60,
                                         ),
                                         Container(
                                           width: 130,

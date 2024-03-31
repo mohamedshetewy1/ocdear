@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ocdear/components/customTextButtom.dart';
-import 'package:ocdear/screen/user_app/child_mode/questions_screens/widgets/next_button.dart';
-import 'package:ocdear/screen/user_app/child_mode/questions_screens/widgets/questions_model.dart';
-import 'package:ocdear/screen/user_app/child_mode/questions_screens/widgets/result_page.dart';
+import 'package:ocdear/screen/intro/questions_screens/widgets/next_button.dart';
+import 'package:ocdear/screen/intro/questions_screens/widgets/questions_model.dart';
+import 'package:ocdear/screen/intro/questions_screens/widgets/result_page.dart';
 import 'package:ocdear/utils/colors.dart';
 
 class QuizScreen extends StatefulWidget {

@@ -32,14 +32,14 @@ class _SliderHomePageState extends State<SliderParent> {
           // print(currentIndex);
         },
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: SizedBox(
             width: double.infinity,
             height: 165,
             child: CarouselSlider(
               items: imageList
                   .map((item) => Padding(
-                        padding: const EdgeInsets.only(top: 15),
+                        padding: const EdgeInsets.symmetric(horizontal: 5),
                         child: Stack(
                           children: [
                             Container(
@@ -54,7 +54,7 @@ class _SliderHomePageState extends State<SliderParent> {
                                     MainAxisAlignment.spaceAround,
                                 children: [
                                   Container(
-                                    width: 170,
+                                    width: 160,
                                     height: 150,
                                     decoration: const BoxDecoration(
                                       image: DecorationImage(
@@ -68,7 +68,7 @@ class _SliderHomePageState extends State<SliderParent> {
                                     child: Directionality(
                                       textDirection: TextDirection.rtl,
                                       child: SizedBox(
-                                        width: 190,
+                                        width: 160,
                                         height: 150,
                                         child: Expanded(
                                           child: Center(

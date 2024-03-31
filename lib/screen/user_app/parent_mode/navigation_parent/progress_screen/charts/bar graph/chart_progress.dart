@@ -96,7 +96,7 @@ class _BarChartProgressState extends State<BarChartProgress> {
             const Gap(10),
             SizedBox(
               height: 197,
-              width: 325,
+              width: 280,
               child: MyBarGraph(
                 weeklySummary: weeklySummary,
               ),

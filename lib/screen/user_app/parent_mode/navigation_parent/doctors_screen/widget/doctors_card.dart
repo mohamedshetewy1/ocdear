@@ -20,7 +20,7 @@ class DoctorsCard extends StatelessWidget {
           decoration: BoxDecoration(
               border: Border.all(color: AppColors.normal),
               borderRadius: const BorderRadius.all(Radius.circular(10))),
-          width: 190,
+          width: 170,
           height: 260,
           child: Column(
             children: [
@@ -51,7 +51,7 @@ class DoctorsCard extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
                       child: Row(
                         children: [
                           SvgPicture.asset(

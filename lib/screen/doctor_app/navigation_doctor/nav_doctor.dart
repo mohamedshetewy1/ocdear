@@ -47,7 +47,7 @@ class _NavParentState extends State<NavDoctor> {
       bottomNavigationBar: LayoutBuilder(
         builder: (context, constraints) {
           return CurvedNavigationBar(
-            backgroundColor: const Color.fromARGB(239, 247, 247, 247),
+            backgroundColor: Colors.white,
             index: _selectedIndex,
             items: [
               CurvedNavigationBarItem(

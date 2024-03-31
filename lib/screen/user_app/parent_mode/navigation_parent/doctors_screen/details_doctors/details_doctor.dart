@@ -72,26 +72,24 @@ class DetailsDoctors extends StatelessWidget {
                       style: AppTextStyle.textStyleNormal20,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 125),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          "assets/icons/location.svg",
-                          width: 15,
-                          height: 15,
-                        ),
-                        const SizedBox(
-                          width: 2,
-                        ),
-                        const Text(
-                          " المنصوره ,شارع الجلاء",
-                          style: AppTextStyle.textStyleGrey14,
-                          // softWrap: true,
-                          overflow: TextOverflow.fade,
-                        )
-                      ],
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        "assets/icons/location.svg",
+                        width: 15,
+                        height: 15,
+                      ),
+                      const SizedBox(
+                        width: 2,
+                      ),
+                      const Text(
+                        " المنصوره ,شارع الجلاء",
+                        style: AppTextStyle.textStyleGrey14,
+                        // softWrap: true,
+                        overflow: TextOverflow.fade,
+                      )
+                    ],
                   ),
                 ],
               ),
@@ -111,12 +109,15 @@ class DetailsDoctors extends StatelessWidget {
                     Gap(
                       15,
                     ),
-                    SizedBox(
-                      height: 120,
-                      child: Expanded(
-                        child: Text(
-                          'فرد متخصص في مجال الطب أو التخصص الطبي الذي يمتلك مهارات وخبرات واسعة في تقديم الرعاية الصحية.يتميز بالمعرفة العلمية العميقة والمهارات العملية في تشخيص الأمراض. فرد متخصص في مجال الطب أو التخصص الطبي الذي يمتلك مهارات وخبرات واسعة في تقديم الرعاية الصحية. يتميز بالمعرفة العلمية العميقة والمهارات العملية في تشخيص الأمراض.',
-                          style: AppTextStyle.textStyleGrey14,
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 3),
+                      child: SizedBox(
+                        height: 120,
+                        child: Expanded(
+                          child: Text(
+                            'فرد متخصص في مجال الطب أو التخصص الطبي الذي يمتلك مهارات وخبرات واسعة في تقديم الرعاية الصحية.يتميز بالمعرفة العلمية العميقة والمهارات العملية في تشخيص الأمراض. فرد متخصص في مجال الطب أو التخصص الطبي الذي يمتلك مهارات وخبرات واسعة في تقديم الرعاية الصحية. يتميز بالمعرفة العلمية العميقة والمهارات العملية في تشخيص الأمراض.',
+                            style: AppTextStyle.textStyleGrey14,
+                          ),
                         ),
                       ),
                     )
@@ -138,7 +139,7 @@ class DetailsDoctors extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    width: 175,
+                    width: 150,
                     height: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -162,7 +163,7 @@ class DetailsDoctors extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    width: 175,
+                    width: 150,
                     height: 50,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),

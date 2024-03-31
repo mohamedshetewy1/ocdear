@@ -19,7 +19,7 @@ class DoctorScreen extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 85),
+            padding: EdgeInsets.symmetric(horizontal: 55),
             child: Text(
               ' أشهر الأطباء',
               style: AppTextStyle.textStyleNormal20,

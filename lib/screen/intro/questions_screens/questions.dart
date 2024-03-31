@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ocdear/components/main_logo.dart';
 import 'package:ocdear/screen/user_app/child_mode/navigation_child/nav_child.dart';
-import 'package:ocdear/screen/user_app/child_mode/questions_screens/widgets/quiz_screen.dart';
+import 'package:ocdear/screen/intro/questions_screens/widgets/quiz_screen.dart';
 import 'package:ocdear/utils/colors.dart';
 
 import 'package:ocdear/utils/text_style.dart';

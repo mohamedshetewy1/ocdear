@@ -27,7 +27,7 @@ class GamesCard extends StatelessWidget {
                 );
               },
               child: Container(
-                width: 370,
+                width: 320,
                 height: 370,
                 decoration: const BoxDecoration(
                   color: Colors.white,
