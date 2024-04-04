@@ -45,7 +45,6 @@ class _SliderHomePageState extends State<SliderParent> {
                             Container(
                               margin: const EdgeInsets.only(top: 10),
                               height: 140,
-                              width: double.infinity,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   color: AppColors.lightHover),
@@ -70,13 +69,11 @@ class _SliderHomePageState extends State<SliderParent> {
                                       child: SizedBox(
                                         width: 160,
                                         height: 150,
-                                        child: Expanded(
-                                          child: Center(
-                                            child: Text(
-                                              item.text,
-                                              style:
-                                                  AppTextStyle.textStyleBlack14,
-                                            ),
+                                        child: Center(
+                                          child: Text(
+                                            item.text,
+                                            style:
+                                                AppTextStyle.textStyleBlack14,
                                           ),
                                         ),
                                       ),

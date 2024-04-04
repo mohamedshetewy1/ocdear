@@ -39,6 +39,7 @@ class _NavParentState extends State<NavParent> {
     return Scaffold(
       body: PageView.builder(
         controller: _pageController,
+        itemCount: _screens.length,
         onPageChanged: (index) {
           setState(() {
             _selectedIndex = index;

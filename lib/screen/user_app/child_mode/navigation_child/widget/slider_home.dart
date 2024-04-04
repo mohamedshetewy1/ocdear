@@ -49,11 +49,9 @@ class _SliderHomePageState extends State<SliderHomePage> {
                             child: SizedBox(
                               width: 200,
                               height: 140,
-                              child: Expanded(
-                                child: Text(
-                                  item.text,
-                                  style: AppTextStyle.textStyleBlack14,
-                                ),
+                              child: Text(
+                                item.text,
+                                style: AppTextStyle.textStyleBlack14,
                               ),
                             ),
                           ),
@@ -71,7 +69,7 @@ class _SliderHomePageState extends State<SliderHomePage> {
               carouselController: carouselController,
               options: CarouselOptions(
                 autoPlayInterval: const Duration(seconds: 10),
-                autoPlay: false,
+                autoPlay: true,
                 autoPlayAnimationDuration: const Duration(seconds: 4),
                 scrollPhysics: const BouncingScrollPhysics(),
                 aspectRatio: 2,

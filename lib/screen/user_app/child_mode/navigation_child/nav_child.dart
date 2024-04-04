@@ -36,6 +36,7 @@ class _NavChildState extends State<NavChild> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView.builder(
+        itemCount: _screens.length,
         controller: _pageController,
         onPageChanged: (index) {
           setState(() {

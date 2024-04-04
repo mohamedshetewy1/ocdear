@@ -12,41 +12,11 @@ class MYPieChart extends StatelessWidget {
     return SizedBox(
       height: 140,
       width: double.infinity,
-      child: Stack(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(right: 8),
-            child: Directionality(
-              textDirection: TextDirection.rtl,
-              child: Row(children: [
-                Padding(
-                  padding: EdgeInsets.only(right: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "تقدم الطفل خلال هذا الأسبوع",
-                        style: AppTextStyle.textStyleBlack17,
-                      ),
-                      Gap(10),
-                      SizedBox(
-                        height: 100,
-                        width: 235,
-                        child: Expanded(
-                          child: Text(
-                            'يُظهر تقدم الطفل في مواجهة التحديات اليومية وتحسين علاقاته الاجتماعية، مما يشير إلى تطور إيجابي في إدارة وسواسه القهري.',
-                            style: AppTextStyle.textStyleGrey14,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ]),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 250, bottom: 30),
+          SizedBox(
+            width: 120,
             child: PieChart(
               PieChartData(
                 startDegreeOffset: 50,
@@ -54,11 +24,13 @@ class MYPieChart extends StatelessWidget {
                 centerSpaceRadius: 40,
                 sections: [
                   PieChartSectionData(
-                    value: 75,
-                    color: AppColors.normal,
-                    radius: 10,
-                    showTitle: false,
-                  ),
+                      value: 75,
+                      color: AppColors.normal,
+                      radius: 10,
+                      showTitle: true,
+                      titlePositionPercentageOffset: -4,
+                      titleStyle: AppTextStyle.textStyle22,
+                      title: "75%"),
                   PieChartSectionData(
                     value: 25,
                     color: Colors.grey.shade400,
@@ -69,14 +41,33 @@ class MYPieChart extends StatelessWidget {
               ),
             ),
           ),
-          const Positioned(
-            left: 35,
-            top: 40,
-            child: Text(
-              "75%",
-              style: AppTextStyle.textStyle22,
+          const Padding(
+            padding: EdgeInsets.only(right: 8),
+            child: Directionality(
+              textDirection: TextDirection.rtl,
+              child: Padding(
+                padding: EdgeInsets.only(right: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "تقدم الطفل خلال هذا الأسبوع",
+                      style: AppTextStyle.textStyleBlack17,
+                    ),
+                    Gap(10),
+                    SizedBox(
+                      height: 100,
+                      width: 200,
+                      child: Text(
+                        'يُظهر تقدم الطفل في مواجهة التحديات اليومية وتحسين علاقاته الاجتماعية، مما يشير إلى تطور إيجابي في إدارة وسواسه القهري.',
+                        style: AppTextStyle.textStyleGrey14,
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
-          )
+          ),
         ],
       ),
     );

@@ -44,11 +44,11 @@ class _ProfileScreenState extends State<ParentProfile> {
             style: AppTextStyle.textStyleNormal20,
           ),
         ),
-        backgroundColor: const Color.fromARGB(239, 247, 247, 247),
+        backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
       ),
-      backgroundColor: const Color.fromARGB(239, 247, 247, 247),
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Form(
           key: formKey,

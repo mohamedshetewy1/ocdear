@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
-class CustomTimeAvailableDoctor extends StatelessWidget {
-  const CustomTimeAvailableDoctor({super.key});
+class CustomDoctorTimeAvailable extends StatelessWidget {
+  const CustomDoctorTimeAvailable({super.key});
 
   @override
   Widget build(BuildContext context) {

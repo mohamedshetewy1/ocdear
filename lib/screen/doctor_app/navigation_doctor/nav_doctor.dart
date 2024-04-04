@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ocdear/screen/doctor_app/navigation_doctor/appointments_doctor/appointments_online.dart';
+import 'package:ocdear/screen/doctor_app/navigation_doctor/appointments_doctor/appointments_tap.dart';
 import 'package:ocdear/screen/doctor_app/navigation_doctor/profile_screen/profile_doctor.dart';
 import 'package:ocdear/screen/user_app/parent_mode/navigation_parent/chat_screen/chat_screen.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
@@ -37,6 +37,7 @@ class _NavParentState extends State<NavDoctor> {
     return Scaffold(
       body: PageView.builder(
         controller: _pageController,
+        itemCount: _screens.length,
         onPageChanged: (index) {
           setState(() {
             _selectedIndex = index;

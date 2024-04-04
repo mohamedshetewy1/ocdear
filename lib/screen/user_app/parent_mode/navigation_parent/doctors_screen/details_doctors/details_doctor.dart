@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:ocdear/screen/user_app/parent_mode/navigation_parent/doctors_screen/chat_doctors/chat_doctor.dart';
-import 'package:ocdear/screen/user_app/parent_mode/navigation_parent/doctors_screen/reservation/reservation_online.dart';
+import 'package:ocdear/screen/user_app/parent_mode/navigation_parent/doctors_screen/reservation/reservation_tab.dart';
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
@@ -113,11 +113,9 @@ class DetailsDoctors extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 3),
                       child: SizedBox(
                         height: 120,
-                        child: Expanded(
-                          child: Text(
-                            'فرد متخصص في مجال الطب أو التخصص الطبي الذي يمتلك مهارات وخبرات واسعة في تقديم الرعاية الصحية.يتميز بالمعرفة العلمية العميقة والمهارات العملية في تشخيص الأمراض. فرد متخصص في مجال الطب أو التخصص الطبي الذي يمتلك مهارات وخبرات واسعة في تقديم الرعاية الصحية. يتميز بالمعرفة العلمية العميقة والمهارات العملية في تشخيص الأمراض.',
-                            style: AppTextStyle.textStyleGrey14,
-                          ),
+                        child: Text(
+                          'فرد متخصص في مجال الطب أو التخصص الطبي الذي يمتلك مهارات وخبرات واسعة في تقديم الرعاية الصحية.يتميز بالمعرفة العلمية العميقة والمهارات العملية في تشخيص الأمراض. فرد متخصص في مجال الطب أو التخصص الطبي الذي يمتلك مهارات وخبرات واسعة في تقديم الرعاية الصحية. يتميز بالمعرفة العلمية العميقة والمهارات العملية في تشخيص الأمراض.',
+                          style: AppTextStyle.textStyleGrey14,
                         ),
                       ),
                     )
@@ -158,7 +156,7 @@ class DetailsDoctors extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const ReservationOnLine(),
+                        builder: (context) => const ReservationTab(),
                       ),
                     );
                   },

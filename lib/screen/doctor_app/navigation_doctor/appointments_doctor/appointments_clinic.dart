@@ -6,8 +6,8 @@ import 'package:ocdear/screen/user_app/parent_mode/navigation_parent/doctors_scr
 import 'package:ocdear/utils/colors.dart';
 import 'package:ocdear/utils/text_style.dart';
 
-class OppointmentOnline extends StatelessWidget {
-  const OppointmentOnline({super.key});
+class OppointmentClinic extends StatelessWidget {
+  const OppointmentClinic({super.key});
 
   @override
   Widget build(BuildContext context) {

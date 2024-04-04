@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ocdear/utils/text_style.dart';
 
-class CustomTimeReservedDoctor extends StatelessWidget {
-  const CustomTimeReservedDoctor({super.key});
+class CustomDoctorTimeReserved extends StatelessWidget {
+  const CustomDoctorTimeReserved({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,14 +10,14 @@ class CustomTimeReservedDoctor extends StatelessWidget {
       width: 100,
       height: 40,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 223, 221, 221),
+        color: const Color.fromARGB(255, 247, 226, 226),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: const Color.fromARGB(255, 148, 145, 145)),
+        border: Border.all(color: const Color.fromARGB(255, 124, 123, 123)),
       ),
       child: const Center(
         child: Text(
           "02:00 pm",
-          style: AppTextStyle.textStylerRed14,
+          style: AppTextStyle.textStyleGrey14,
         ),
       ),
     );
