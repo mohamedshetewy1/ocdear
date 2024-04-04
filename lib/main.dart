@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: NavDoctor(),
+      home: SplashScreen(),
     );
   }
 }
